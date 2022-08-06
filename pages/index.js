@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import { TodoInput } from '../components/TodoInput'
 
 export default function Home() {
   return (
-    <div>
-      <h1 className='text-red-400'>A Fullstack Todo App</h1>
+    <div className='font-josefin-sans h-screen bg-hero-light-mobile sm:bg-hero-light-desktop bg-no-repeat bg-contain'>
+      <TodoInput />
     </div>
   )
 }
