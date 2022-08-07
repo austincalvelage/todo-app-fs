@@ -4,9 +4,12 @@ import { TodoInput } from '../components/TodoInput'
 
 export default function Home() {
   return (
+    <>
+    <Head />
     <div className='font-josefin-sans h-screen px-6 bg-hero-light-mobile sm:bg-hero-light-desktop bg-no-repeat bg-contain'>
       <Header />
       <TodoInput />
     </div>
+    </>
   )
 }
