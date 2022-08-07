@@ -1,15 +1,21 @@
 import Head from 'next/head'
 import { Header } from '../components/Header'
 import { TodoInput } from '../components/TodoInput'
-
+import { Todos } from '../components/Todos'
+import { FilterTodos } from '../components/FilterTodos'
 export default function Home() {
   return (
     <>
       <Head />
-      <div className='flex justify-center font-josefin-sans h-screen bg-hero-light-mobile bg-no-repeat bg-[length:100%_200px] sm:bg-hero-light-desktop sm:bg-[length:100%_300px]'>
+      <div className='flex justify-center font-josefin-sans h-screen bg-hero-light-mobile bg-no-repeat bg-[length:100%_200px] sm:bg-hero-light-desktop sm:bg-[length:100%_300px] bg-[#FAFAFA]'>
         <main className='w-full px-6 sm:max-w-xl'>
           <Header />
-          <TodoInput />
+          <div className='space-y-4 round-md'>
+            <TodoInput />
+            <Todos />
+            <FilterTodos />
+          </div>
+          <span className='block text-[#9495A5] text-center text-sm w-full mt-10'>Drag and drop to reorder list</span>
         </main>
       </div>
     </>
