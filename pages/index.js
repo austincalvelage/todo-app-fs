@@ -6,9 +6,11 @@ export default function Home() {
   return (
     <>
       <Head />
-      <div className='font-josefin-sans h-screen px-6 bg-hero-light-mobile sm:bg-hero-light-desktop bg-no-repeat bg-contain'>
-        <Header />
-        <TodoInput />
+      <div className='flex justify-center font-josefin-sans h-screen bg-hero-light-mobile bg-no-repeat bg-[length:100%_200px] sm:bg-hero-light-desktop sm:bg-[length:100%_300px]'>
+        <main className='w-full px-6 sm:max-w-xl'>
+          <Header />
+          <TodoInput />
+        </main>
       </div>
     </>
   )
