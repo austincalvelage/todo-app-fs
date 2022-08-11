@@ -10,14 +10,19 @@ import { Auth } from '../components/Auth'
 import { About } from '../components/About'
 
 export default function Home() {
-  const [aboutModal, setAboutModal] = useState(false);
+  const [aboutStatus, setAboutStatus] = useState(false);
+
+  function modalClickHandler() {
+    setAboutStatus(prevState => !prevState);
+  }
+
   return (
     <>
       <Head />
-      <About isOpen={aboutModal}/>
+      <About isOpen={aboutStatus} clickHandler={modalClickHandler}/>
       <div className='flex justify-center font-josefin-sans h-screen bg-hero-light-mobile bg-no-repeat bg-[length:100%_200px] sm:bg-hero-light-desktop sm:bg-[length:100%_300px] bg-[#FAFAFA]'>
         <main className='w-full px-6 sm:max-w-xl'>
-          <Header />
+          <Header clickHandler={modalClickHandler}/>
           <div className='space-y-4 round-md'>
             <TodoInput />
             <Todos />
