@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <Head />
-      <AuthModal isOpen={authModalState} />
+      {/* <AuthModal isOpen={authModalState} /> */}
       <AboutModal isOpen={aboutModalState} />
       <div className="flex justify-center font-josefin-sans h-screen bg-hero-light-mobile bg-no-repeat bg-[length:100%_200px] sm:bg-hero-light-desktop sm:bg-[length:100%_300px] bg-[#FAFAFA]">
         <main className="px-6 w-full sm:max-w-xl">
