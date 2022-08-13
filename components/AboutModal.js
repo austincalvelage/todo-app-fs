@@ -1,10 +1,10 @@
 import React from "react";
-
+import classNames from "classnames";
 import { IconCross } from "./IconCross";
 
-export const AboutModal = () => {
+export const AboutModal = ({isOpen}) => {
   return (
-    <div className="absolute inset-0 z-20 bg-purple-400/40 h-screen w-screen flex justify-center items-center">
+    <div className={classNames("absolute inset-0 z-20 bg-purple-400/40 h-screen w-screen flex justify-center items-center", isOpen ? 'flex' : 'hidden')}>
       <div className="flex flex-col bg-black/70  max-w-md rounded-md shadow-lg pt-5 pb-10 px-10 space-y-4">
         <IconCross
           fill="#fff"
