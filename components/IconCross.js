@@ -3,6 +3,7 @@ export const IconCross = ({
   tailwindStyles,
   width = "12",
   height = "12",
+  onClick,
 }) => {
   return (
     <svg
@@ -12,6 +13,7 @@ export const IconCross = ({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={`hover:cursor-pointer ${tailwindStyles}`}
+      onClick={onClick}
     >
       <path
         fillRule="evenodd"

@@ -12,14 +12,18 @@ import { AboutModal } from "../components/AboutModal";
 export default function Home() {
   const [aboutModalState, setAboutModalState] = useState(false);
   const [authModalState, setAuthModalState] = useState(false);
+
+  function aboutModalToggle() {
+    setAboutModalState(prevState => !prevState);
+  }
   return (
     <>
       <Head />
-      <AuthModal isOpen={authModalState} />
-      <AboutModal isOpen={aboutModalState} />
+      {/* <AuthModal isOpen={authModalState} /> */}
+      <AboutModal isOpen={aboutModalState} toggleModal={aboutModalToggle}/>
       <div className="flex justify-center font-josefin-sans h-screen bg-hero-light-mobile bg-no-repeat bg-[length:100%_200px] sm:bg-hero-light-desktop sm:bg-[length:100%_300px] bg-[#FAFAFA]">
         <main className="px-6 w-full sm:max-w-xl">
-          <Header />
+          <Header toggleModal={aboutModalToggle}/>
           <div className="space-y-4 round-md">
             <TodoInput />
             <Todos />
